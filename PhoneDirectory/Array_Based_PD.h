@@ -56,14 +56,19 @@ private:
 	class Directory_Entry /* Exercise 1.6: Please complete the definition of the Directory_Entry class here. - Ed/Kent */
 	{
 	public:
+		std::string name;
+		std::string number;
+
 		Directory_Entry()
 		{
-
+			name = "";
+			number = "";
 		}
 
 		Directory_Entry(std::string the_name, std::string the_number)
 		{
-
+			name = the_name;
+			set_number(the_number);
 		}
 
 		std::string get_name()
