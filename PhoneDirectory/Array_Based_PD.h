@@ -56,8 +56,15 @@ private:
 	class Directory_Entry /* Exercise 1.6: Please complete the definition of the Directory_Entry class here. - Ed/Kent */
 	{
 	public:
-		Directory_Entry();
-		Directory_Entry(std::string the_name, std::string the_number);
+		Directory_Entry()
+		{
+
+		}
+
+		Directory_Entry(std::string the_name, std::string the_number)
+		{
+
+		}
 
 		std::string get_name()
 		{
