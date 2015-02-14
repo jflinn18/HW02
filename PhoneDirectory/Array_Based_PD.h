@@ -56,7 +56,10 @@ private:
 	class Directory_Entry /* Exercise 1.6: Please complete the definition of the Directory_Entry class here. - Ed/Kent */
 	{
 	public:
+		/**  The name of the Contact stored in the Directory_Entry  */
 		std::string name;
+
+		/**  The number associated with the name stored in the Directory_Entry  */
 		std::string number;
 
 		/**
