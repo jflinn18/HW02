@@ -92,7 +92,9 @@ void do_remove_entry(Phone_Directory& the_directory) // Exercise 1.8: please com
 	getline(cin, name);
 	// Complete the rest of this function 
 
-	the_directory.remove_entry(name);
+	string number = the_directory.remove_entry(name);
+
+	cout << number << " has been removed.\n";
 	
 }
 
