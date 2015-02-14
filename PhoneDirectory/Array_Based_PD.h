@@ -59,31 +59,46 @@ private:
 		std::string name;
 		std::string number;
 
+		/**
+			Creates a new Directory_Entry without any parameters
+		*/
 		Directory_Entry()
 		{
 			name = "";
 			number = "";
 		}
 
+		/**
+			Creates a new Directory_Entry with parameters passed.
+			It stores these parameters in member variables.
+
+			@param name of new contact
+			@param number of new contact
+		*/
 		Directory_Entry(std::string the_name, std::string the_number)
 		{
 			name = the_name;
 			set_number(the_number);
 		}
 
-		std::string get_name()
-		{
-			return "";
-		}
+		/**
+			returns the name stored in the directory_entry
 
-		std::string get_number()
-		{
-			return "";
-		}
+			@return
+		*/
+		std::string get_name() const { return name; }
 
+		/**
+			returns the number stored in the directory_entry
+		*/
+		std::string get_number() const { return number; }
+
+		/**
+			@param new number of a directory_entry
+		*/
 		void set_number(const std::string& new_number)
 		{
-
+			number = new_number;
 		}
 	
 	private:
