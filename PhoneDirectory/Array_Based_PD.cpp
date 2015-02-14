@@ -116,12 +116,24 @@ void Phone_Directory::save()
 string Phone_Directory::remove_entry(const string& name) // Exercise 1.7: please complete the remove_entry() method - Ed/Kent
 {
 	int name_location = find(name);
-	
-	// Hint: you can use the code below to shift names down in the directory to remove the selected entry specified by "index"
-	for (int i = name_location; i < size - 1; i++)
-		the_directory[i] = the_directory[i + 1];
 
-	return "";
+	// If the person is in the directory then remove them and output the number that was just removed
+	if (name_location > -1)
+	{
+		// stores the number of the person to return later
+		string num = the_directory[name_location].get_number();
+
+		// Hint: you can use the code below to shift names down in the directory to remove the selected entry specified by "index"
+		for (int i = name_location; i < size - 1; i++)
+			the_directory[i] = the_directory[i + 1];
+
+		size--;
+
+		return num;
+	}
+	// if the person is not in the directory, don't remove
+	else
+		return "";
 }
 
 // Private method implementation
